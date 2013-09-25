@@ -10,8 +10,8 @@ import org.junit.Test;
 public class WhenYouCreateACell {
 
     @Test
-    public void aLiveCellShouldBeRepresentedByAnAsterisk() {
-        Cell cell = Cell.fromSymbol("*");
+    public void aLiveCellShouldBeRepresentedByAPlus() {
+        Cell cell = Cell.fromSymbol("+");
         assertThat(cell, is(LIVE_CELL));
     }
 
@@ -22,8 +22,8 @@ public class WhenYouCreateACell {
     }
 
     @Test
-    public void aLiveCellShouldBePrintedAsAnAsterisk() {
-        assertThat(Cell.LIVE_CELL.toString(), is("*"));
+    public void aLiveCellShouldBePrintedAsAPlus() {
+        assertThat(Cell.LIVE_CELL.toString(), is("+"));
     }
 
 
@@ -38,8 +38,8 @@ public class WhenYouCreateACell {
     }
 
     @Test
-    public void aLiveCellSymbolShouldBeAnAsterisk() {
-        assertThat(Cell.LIVE_CELL.getSymbol(), is("*"));
+    public void aLiveCellSymbolShouldBeAPlus() {
+        assertThat(Cell.LIVE_CELL.getSymbol(), is("+"));
     }
 
 }
