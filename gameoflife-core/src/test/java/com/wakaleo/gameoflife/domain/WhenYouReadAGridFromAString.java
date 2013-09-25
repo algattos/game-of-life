@@ -27,7 +27,7 @@ public class WhenYouReadAGridFromAString {
 
     @Test
     public void shouldBeAbleToReadAGridContainingASingleCellFromAString() {
-        String gridContents = "*";
+        String gridContents = "+";
 
         Cell[][] expectedCells = {{LIVE_CELL}};
 
@@ -75,9 +75,9 @@ public class WhenYouReadAGridFromAString {
 
     @Test
     public void shouldBeAbleToReadAGridContainingLiveAndDeadCells() {
-        String gridContents = "*.." + NEW_LINE +
-                ".*." + NEW_LINE +
-                "..*";
+        String gridContents = "+.." + NEW_LINE +
+                ".+." + NEW_LINE +
+                "..+";
 
         Cell[][] expectedCells = {
                 {LIVE_CELL, DEAD_CELL, DEAD_CELL},
@@ -94,8 +94,8 @@ public class WhenYouReadAGridFromAString {
     @Test
     public void shouldBeAbleToReadAnAsymetricalGridContainingLiveAndDeadCells() {
         String gridContents = "...." + NEW_LINE +
-                "**.." + NEW_LINE +
-                "..*.";
+                "++.." + NEW_LINE +
+                "..+.";
 
         Cell[][] expectedCells = {
                 {DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL},
@@ -112,11 +112,11 @@ public class WhenYouReadAGridFromAString {
     @Test
     public void shouldBeAbleToReadALargerGrid() {
         String gridContents = "......" + NEW_LINE +
-                "**...." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*...";
+                "++...." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+...";
 
         Cell[][] expectedCells = {
                 {DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL},
@@ -136,14 +136,14 @@ public class WhenYouReadAGridFromAString {
     @Test
     public void shouldBeAbleToReadAVeryLargerGrid() {
         String gridContents = "......" + NEW_LINE +
-                "**...." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*..." + NEW_LINE +
-                "..*...";
+                "++...." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+..." + NEW_LINE +
+                "..+...";
 
         Cell[][] expectedCells = {
                 {DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL, DEAD_CELL},
